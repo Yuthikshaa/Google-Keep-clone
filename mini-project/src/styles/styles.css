@@ -1,0 +1,381 @@
+body {
+  margin: 0;
+  /* Trash Container */
+}
+body .top-bar {
+  position: fixed;
+  padding: 8px;
+  align-items: center;
+  border-bottom: 1px solid rgb(170, 165, 165);
+  width: 100%;
+  background-color: white;
+  z-index: 1;
+}
+body .top-bar .bars {
+  padding: 10px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+body .top-bar .bars:hover {
+  background-color: lightgray;
+}
+body .top-bar .logo {
+  margin: 0 5px;
+  height: 43px;
+  width: 30px;
+  vertical-align: middle;
+}
+body .top-bar .search-icon {
+  height: 20px;
+  width: 20px;
+  vertical-align: middle;
+}
+body .top-bar .search-bar {
+  display: inline-block;
+  margin: 0 50px;
+  background: #f1f3f4;
+  border-radius: 7px;
+  padding: 8px 12px;
+  height: 25px;
+}
+body .top-bar .search-bar__input {
+  border: none;
+  outline: none;
+  background: #f1f3f4;
+  width: 500px;
+}
+body .top-bar .toolbar {
+  display: inline-block;
+}
+body .top-bar .toolbar__group {
+  display: inline-block;
+  vertical-align: middle;
+}
+body .top-bar .toolbar__group--left {
+  margin-left: 200px;
+}
+body .top-bar .toolbar__group--right {
+  margin-left: 20px;
+}
+body .top-bar .toolbar__icon {
+  display: inline-block;
+  border-radius: 50%;
+  padding: 4px;
+  cursor: pointer;
+}
+body .top-bar .toolbar__icon:hover {
+  background-color: lightgrey;
+}
+body .top-bar .toolbar__icon-img {
+  margin: 0 4px;
+  height: 20px;
+  width: 20px;
+  vertical-align: middle;
+}
+body .top-bar .toolbar__icon-img:hover {
+  background-color: lightgrey;
+}
+body .sidebar {
+  position: fixed;
+  top: 50px;
+  left: 8px;
+  width: 60px;
+  padding-top: 10px;
+  height: 100vh;
+}
+body .sidebar__icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  margin: 10px 0;
+}
+body .sidebar__icon:hover {
+  background-color: lightgray;
+}
+body .sidebar__icon img {
+  width: 24px;
+  height: 24px;
+}
+body .sidebar__icon.active {
+  background-color: #f4e2ae;
+}
+body .main {
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  width: calc(100% - 60px);
+  padding: 20px 20px 20px 100px;
+  box-sizing: border-box;
+}
+body .main .note {
+  margin: 20px auto;
+  width: 400px;
+  border-radius: 8px;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+body .main .note__header {
+  padding-bottom: 10px;
+  display: none;
+}
+body .main .note__title {
+  width: 90%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  resize: none;
+  min-height: 5px;
+}
+body .main .note__pin {
+  width: 7%;
+  height: 25px;
+  vertical-align: top;
+}
+body .main .note__content {
+  width: 100%;
+  font-size: 12px;
+  border: none;
+  outline: none;
+  resize: none;
+  min-height: 5px;
+}
+body .main .note__footer {
+  display: none;
+  text-align: right;
+}
+body .main .note__close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+}
+body .main .notes-section {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 50px;
+}
+body .main .notes-section__title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+body .main .notes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+}
+body .main .note-item {
+  width: 250px;
+  min-height: 100px;
+  background: #fff;
+  border: 1px solid lightgrey;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+}
+body .main .note-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+body .main .note-item__header {
+  width: 100%;
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  position: relative;
+}
+body .main .note-item__title {
+  width: calc(100% - 30px);
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  font-weight: bold;
+  resize: none;
+  outline: none;
+}
+body .main .note-item__pin {
+  position: absolute;
+  right: 5px;
+  top: 3px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  display: none;
+}
+body .main .note-item__content {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  resize: none;
+  outline: none;
+}
+body .main .note-item__footer {
+  width: 100%;
+  text-align: right;
+  display: none;
+  margin-top: 10px;
+  padding-right: 5px;
+}
+body .main .note-item__footer button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 8px;
+}
+body .main .note-item__footer button:hover {
+  color: #007BFF;
+}
+body .main .note-item:hover body .main .note-item__pin {
+  display: block;
+}
+body .main .note-item:hover body .main .note-item__footer {
+  display: block;
+}
+body .note-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  padding: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .note-modal__content {
+  width: 80%;
+  height: 80%;
+  background: white;
+  border-radius: 10px;
+  padding: 2%;
+  overflow: hidden;
+  position: relative;
+}
+body .note-modal__title,
+body .note-modal__body {
+  display: block;
+  width: 96%;
+  margin: 10px auto;
+  font-size: 1.2rem;
+  border: none;
+  padding: 10px;
+  resize: none;
+  outline: none;
+  overflow-y: auto;
+}
+body .note-modal__title {
+  font-weight: bold;
+  height: 15%;
+}
+body .note-modal__body {
+  height: 65%;
+}
+body .note-modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+body .note-modal__save {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+body .note-modal__save:hover {
+  background: lightgray;
+}
+body .hidden {
+  display: none;
+}
+body .trash-container {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  width: calc(100% - 60px);
+  padding: 20px 20px 20px 100px;
+  box-sizing: border-box;
+}
+body .trashed-note-item {
+  width: 250px;
+  min-height: 100px;
+  background: #fff;
+  border: 1px solid lightgrey;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+}
+body .trashed-note-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+body .trashed-note-item:hover .trashed-note-item__footer {
+  visibility: visible;
+}
+body .trashed-note-item__header {
+  margin-bottom: 8px;
+}
+body .trashed-note-item__title {
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  resize: none;
+  outline: none;
+  padding: 4px;
+  color: #333;
+}
+body .trashed-note-item__content {
+  width: 100%;
+  font-size: 16px;
+  background: none;
+  border: none;
+  resize: none;
+  outline: none;
+  color: #555;
+  padding: 4px;
+}
+body .trashed-note-item__footer {
+  visibility: hidden;
+  text-align: left;
+}
+body .trashed-note-item__footer:hover {
+  visibility: visible;
+}
+body .trashed-note-item__delete-permanently, body .trashed-note-item__restore {
+  color: white;
+  border: none;
+  padding: 4px 4px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+body .trashed-note-item__delete-permanently:hover, body .trashed-note-item__restore:hover {
+  background-color: lightgray;
+}/*# sourceMappingURL=styles.css.map */
