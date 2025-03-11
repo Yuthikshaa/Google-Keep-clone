@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Note</title>
+    <link rel="icon" href="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png" type="image/icon type">
+    <script type="module" src="./src/index.js"></script>
+    <link rel="stylesheet" href="./src/styles/styles.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        <span>
+            <img src="bars.PNG" alt="Bars" class="bars">
+        </span>
+
+        <span>
+            <span>
+                <img src="gkeep-logo.jpg" alt="Logo" class="logo">
+            </span>
+            <span>QuickNote</span>
+        </span>
+
+        <div class="search-bar">
+            <img src="search.png" alt="search-icon" class="search-icon">
+            <input type="text" placeholder="Search" class="search-bar__input">
+        </div>
+
+        <div class="toolbar">
+            <div class="toolbar__group toolbar__group--left">
+                <span class="toolbar__icon">
+                    <img src="refresh.png" alt="refresh" class="toolbar__icon-img">
+                </span>
+                <span class="toolbar__icon">
+                    <img src="list.png" alt="list" class="toolbar__icon-img">
+                </span>
+                <span class="toolbar__icon">
+                    <img src="setting.png" alt="settings" class="toolbar__icon-img">
+                </span>
+            </div>
+        
+            <div class="toolbar__group toolbar__group--right">
+                <span class="toolbar__icon">
+                    <img src="show-apps.png" alt="apps" class="toolbar__icon-img">
+                </span>
+                <span class="toolbar__icon">
+                    <img src="user.PNG" alt="user" class="toolbar__icon-img">
+                </span>
+            </div>
+        </div>        
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <a href="#" class="sidebar__icon sidebar__icon--notes active" id="notes-tab">
+                <img src="note.png" alt="Notes">
+            </a>
+            <a href="#" class="sidebar__icon sidebar__icon--bin" id="trash-tab">
+                <img src="bin.png" alt="Bin">
+            </a>
+        </div>        
+        
+        <!-- Notes View -->
+        <div id="notes-view" class="main">
+            <div class="note">
+                <div class="note__header">
+                    <textarea class="note__title" placeholder="Title"></textarea>
+                    <img class="note__pin" src="pin.png" alt="Unpin">
+                </div>
+                <textarea class="note__content" placeholder="Take a note..." onclick="noteView.expand()"></textarea>
+                <div class="note__footer">
+                    <button class="note__close">Close</button>
+                </div>
+            </div>
+            
+            <!-- Pinned Notes Section -->
+            <div class="notes-section">
+                <h3 class="notes-section__title">PINNED</h3>
+                <div class="notes-grid notes-grid--pinned"></div>
+            </div>
+
+            <!-- Other Notes Section -->
+            <div class="notes-section">
+                <h3 class="notes-section__title">OTHERS</h3>
+                <div class="notes-grid notes-grid--others"></div>
+            </div>
+        </div>
+
+        <div id="filtered-notes" class="main hidden">
+        </div>
+        
+        <div id="trash-view" class="trash-container">
+        </div>
+    </div>
+
+</body>
+</html>
